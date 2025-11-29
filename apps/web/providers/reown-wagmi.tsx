@@ -3,7 +3,7 @@
 import { wagmiAdapter, projectId } from "@/config/web3";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { createAppKit } from "@reown/appkit/react";
-import { baseSepolia } from "@reown/appkit/networks";
+import { mainnet, arbitrum } from "@reown/appkit/networks";
 import React, { type ReactNode } from "react";
 import { cookieToInitialState, WagmiProvider, type Config } from "wagmi";
 
@@ -16,25 +16,26 @@ if (!projectId) {
 
 // Set up metadata
 const metadata = {
-	name: "koanprotocol.xyz",
-	description: "A DEX",
-	url: "https://koanprotocol.xyz", // origin must match your domain & subdomain
-	icons: ["https://koanprotocol.xyz/avatar"],
+	name: "appkit-example",
+	description: "AppKit Example",
+	url: "https://appkitexampleapp.com", // origin must match your domain & subdomain
+	icons: ["https://avatars.githubusercontent.com/u/179229932"],
 };
 
 // Create the modal
+//eslint-disable-next-line @typescript-eslint/no-unused-vars
 const modal = createAppKit({
 	adapters: [wagmiAdapter],
 	projectId,
-	networks: [baseSepolia],
-	defaultNetwork: baseSepolia,
+	networks: [mainnet, arbitrum],
+	defaultNetwork: mainnet,
 	metadata: metadata,
 	features: {
 		analytics: true, // Optional - defaults to your Cloud configuration
 	},
 });
 
-function Web3ContextProvider({
+function ContextProvider({
 	children,
 	cookies,
 }: {
@@ -55,4 +56,4 @@ function Web3ContextProvider({
 	);
 }
 
-export { Web3ContextProvider };
+export default ContextProvider;

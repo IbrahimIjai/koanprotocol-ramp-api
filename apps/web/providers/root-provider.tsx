@@ -1,6 +1,6 @@
 "use client";
 
-import { Web3ContextProvider } from "./reown-wagmi";
+import ContextProvider  from "./reown-wagmi";
 import { ThemeProvider } from "./theme-provider";
 
 export function RootProvider({
@@ -12,7 +12,7 @@ export function RootProvider({
 }) {
 	return (
 		<>
-			<Web3ContextProvider cookies={cookies}>
+			<ContextProvider cookies={cookies}>
 				<ThemeProvider
 					attribute="class"
 					defaultTheme="light"
@@ -21,7 +21,7 @@ export function RootProvider({
 					disableTransitionOnChange>
 					{children}
 				</ThemeProvider>
-			</Web3ContextProvider>
+			</ContextProvider>
 		</>
 	);
 }
