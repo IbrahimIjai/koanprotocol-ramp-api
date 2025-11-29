@@ -42,4 +42,5 @@ export interface RampProvider {
   createOrder(order: RampOrderRequest): Promise<RampOrderResponse>;
   verifyWebhookSignature(request: Request): Promise<boolean>;
   handleWebhook(payload: any): Promise<any>;
+  getSupportedCurrencies(): Promise<any>;
 }

@@ -10,6 +10,7 @@ export const getRates = async (c: Context) => {
   const currency = c.req.query('currency');
   const network = c.req.query('network');
   const providerName = c.req.query('provider');
+  console.log({providerName})
 
   if (!token || !amount || !currency || !network) {
     return c.json({ error: 'Missing required parameters' }, 400);

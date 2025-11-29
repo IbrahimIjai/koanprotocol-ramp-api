@@ -108,4 +108,13 @@ export class PaycrestProvider implements RampProvider {
       originalPayload: payload,
     };
   }
+
+  async getSupportedCurrencies(): Promise<any> {
+    try {
+      const response = await this.client.get('/currencies');
+      return response.data;
+    } catch (error: any) {
+      throw new Error(`Paycrest currencies fetch failed: ${error.message}`);
+    }
+  }
 }
