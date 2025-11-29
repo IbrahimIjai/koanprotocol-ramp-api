@@ -24,6 +24,16 @@ importers:
         specifier: 5.7.3
         version: 5.7.3
 
+  apps/games-data-api:
+    dependencies:
+      hono:
+        specifier: ^4.10.7
+        version: 4.10.7
+    devDependencies:
+      wrangler:
+        specifier: ^4.4.0
+        version: 4.51.0(bufferutil@4.0.9)(utf-8-validate@5.0.10)
+
   apps/lottery-data-api:
     dependencies:
       hono:
@@ -36,6 +46,9 @@ importers:
 
   apps/ramp-worker:
     dependencies:
+      axios:
+        specifier: ^1.13.2
+        version: 1.13.2
       hono:
         specifier: ^4.10.7
         version: 4.10.7
@@ -103,6 +116,9 @@ importers:
       wagmi:
         specifier: ^3.0.2
         version: 3.0.2(690aadfd1eddcba8533969798dd989b5)
+      zustand:
+        specifier: ^5.0.8
+        version: 5.0.8(@types/react@19.2.7)(react@19.2.0)(use-sync-external-store@1.4.0(react@19.2.0))
     devDependencies:
       '@gemini-wallet/core':
         specifier: ^0.3.2
@@ -5586,6 +5602,24 @@ packages:
       use-sync-external-store:
         optional: true
 
+  zustand@5.0.8:
+    resolution: {integrity: sha512-gyPKpIaxY9XcO2vSMrLbiER7QMAMGOQZVRdJ6Zi782jkbzZygq5GI9nG8g+sMgitRtndwaBSl7uiqC49o1SSiw==}
+    engines: {node: '>=12.20.0'}
+    peerDependencies:
+      '@types/react': '>=18.0.0'
+      immer: '>=9.0.6'
+      react: '>=18.0.0'
+      use-sync-external-store: '>=1.2.0'
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+      immer:
+        optional: true
+      react:
+        optional: true
+      use-sync-external-store:
+        optional: true
+
 snapshots:
 
   '@adraffy/ens-normalize@1.11.1': {}
@@ -9029,8 +9063,7 @@ snapshots:
 
   async-limiter@1.0.1: {}
 
-  asynckit@0.4.0:
-    optional: true
+  asynckit@0.4.0: {}
 
   atomic-sleep@1.0.0: {}
 
@@ -9051,7 +9084,6 @@ snapshots:
       proxy-from-env: 1.1.0
     transitivePeerDependencies:
       - debug
-    optional: true
 
   babel-jest@29.7.0(@babel/core@7.28.5):
     dependencies:
@@ -9365,7 +9397,6 @@ snapshots:
   combined-stream@1.0.8:
     dependencies:
       delayed-stream: 1.0.0
-    optional: true
 
   commander@10.0.1: {}
 
@@ -9518,8 +9549,7 @@ snapshots:
   delay@5.0.0:
     optional: true
 
-  delayed-stream@1.0.0:
-    optional: true
+  delayed-stream@1.0.0: {}
 
   depd@2.0.0: {}
 
@@ -10008,8 +10038,7 @@ snapshots:
 
   flow-enums-runtime@0.0.6: {}
 
-  follow-redirects@1.15.11:
-    optional: true
+  follow-redirects@1.15.11: {}
 
   for-each@0.3.5:
     dependencies:
@@ -10022,7 +10051,6 @@ snapshots:
       es-set-tostringtag: 2.1.0
       hasown: 2.0.2
       mime-types: 2.1.35
-    optional: true
 
   fresh@0.5.2: {}
 
@@ -11443,7 +11471,7 @@ snapshots:
       ox: 0.9.6(typescript@5.9.3)(zod@4.1.13)
       viem: 2.40.3(bufferutil@4.0.9)(typescript@5.9.3)(utf-8-validate@5.0.10)(zod@3.25.76)
       zod: 4.1.13
-      zustand: 5.0.3(@types/react@19.2.7)(react@19.2.0)(use-sync-external-store@1.4.0(react@19.2.0))
+      zustand: 5.0.8(@types/react@19.2.7)(react@19.2.0)(use-sync-external-store@1.4.0(react@19.2.0))
     optionalDependencies:
       '@tanstack/react-query': 5.90.11(react@19.2.0)
       react: 19.2.0
@@ -12701,6 +12729,13 @@ snapshots:
       use-sync-external-store: 1.4.0(react@19.2.0)
 
   zustand@5.0.3(@types/react@19.2.7)(react@19.2.0)(use-sync-external-store@1.4.0(react@19.2.0)):
+    optionalDependencies:
+      '@types/react': 19.2.7
+      react: 19.2.0
+      use-sync-external-store: 1.4.0(react@19.2.0)
+    optional: true
+
+  zustand@5.0.8(@types/react@19.2.7)(react@19.2.0)(use-sync-external-store@1.4.0(react@19.2.0)):
     optionalDependencies:
       '@types/react': 19.2.7
       react: 19.2.0
