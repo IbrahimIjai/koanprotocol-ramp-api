@@ -1,9 +1,24 @@
-import { Hono } from 'hono'
+import { Hono } from 'hono';
+import { cors } from 'hono/cors';
+import { getRates } from './routes/rates';
+import { createOrder } from './routes/orders';
+import { handleWebhook } from './routes/webhooks';
 
-const app = new Hono()
+type Bindings = {
+  PAYCREST_API_KEY: string;
+  PAYCREST_API_SECRET: string;
+  DEXPAY_API_KEY: string;
+  DEXPAY_API_SECRET: string;
+};
 
-app.get('/', (c) => {
-  return c.text('Hello Hono!')
-})
+const app = new Hono<{ Bindings: Bindings }>();
 
-export default app
+app.use('*', cors());
+
+app.get('/', (c) => c.text('Ramp Worker API'));
+
+app.get('/rates', getRates);
+app.post('/orders', createOrder);
+app.post('/webhooks/:provider', handleWebhook);
+
+export default app;
