@@ -50,16 +50,9 @@ tokensRoute.get("/", async (c) => {
 
 		// Fetch prices for all tokens in this chain
 		const addresses = tokens.map((t) => t.address);
-		const prices = await getTokenPrices(chainId, addresses, c.env);
-
-		// Merge prices into token objects
-		const priceMap = new Map(
-			prices.map((p) => [p.tokenAddress.toLowerCase(), p.usdPrice]),
-		);
 
 		const tokensWithPrices = tokens.map((t) => ({
 			...t,
-			price: priceMap.get(t.address.toLowerCase()) ?? 0,
 		}));
 
 		return c.json({
