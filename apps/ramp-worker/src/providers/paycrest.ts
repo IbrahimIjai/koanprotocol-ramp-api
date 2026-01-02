@@ -43,7 +43,15 @@ export class PaycrestProvider implements RampProvider {
       token: order.token,
       network: order.network,
       rate: order.rate,
-      recipient: order.recipient,
+      recipient: {
+        institution: order.recipient.institution,
+        accountIdentifier: order.recipient.accountIdentifier,
+        accountName: order.recipient.accountName,
+        memo: order.recipient.memo,
+        currency: order.recipient.currency,
+        providerId: order.recipient.providerId,
+        metadata: order.recipient.metadata,
+      },
       reference: order.reference,
       returnAddress: order.returnAddress,
     };
@@ -55,13 +63,16 @@ export class PaycrestProvider implements RampProvider {
         },
       });
 
-      const data = response.data;
+      const responseData = response.data;
+      // Paycrest returns { status: "success", message: "...", data: { ... } }
+      const data = responseData.data;
+
       return {
         id: data.id,
         receiveAddress: data.receiveAddress,
         validUntil: data.validUntil,
-        senderFee: data.senderFee,
-        transactionFee: data.transactionFee,
+        senderFee: data.senderFee?.toString(),
+        transactionFee: data.transactionFee?.toString(),
         status: 'pending',
         provider: this.name,
         metadata: data,

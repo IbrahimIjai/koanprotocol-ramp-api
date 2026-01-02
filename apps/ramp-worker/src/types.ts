@@ -11,15 +11,17 @@ export interface RampOrderRequest {
   amount: number;
   token: string;
   network: string;
-  rate: string;
+  rate: number;
   recipient: {
-    institution?: string;
+    institution: string;
     accountIdentifier: string;
     accountName: string;
     currency: string;
-    memo?: string;
+    memo: string;
     email?: string;
     phoneNumber?: string;
+    providerId?: string;
+    metadata?: any;
   };
   reference?: string;
   returnAddress?: string;
