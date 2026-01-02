@@ -1,0 +1,113 @@
+{
+  "name": "Koan Protocol TokenList",
+  "timestamp": "2025-07-21T21:19:07.885Z",
+  "version": {
+    "major": 1,
+    "minor": 0,
+    "patch": 0
+  },
+  "tags": {},
+  "logoURI": "https://raw.githubusercontent.com/koan-protocol/tokenlist/list/logos/koanlogo-256x256.png",
+  "keywords": [
+    "Koanprotocol",
+    "default"
+  ],
+  "tokens": [
+    {
+      "chainId": 4202,
+      "address": "0x26F653f8b51FA2F6c39eD6adf1A9401B8DBA8819",
+      "name": "Dai Stablecoin ",
+      "symbol": "DAI",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/Koan-Protocol/token-list/main/token-list/src/logos/lisk-sepolia/0x26F653f8b51FA2F6c39eD6adf1A9401B8DBA8819.png"
+    },
+    {
+      "chainId": 4202,
+      "address": "0x0a281E2193FFfb4EFD50B198DA25494A2644f43E",
+      "name": "KOAN Token",
+      "symbol": "KOAN",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/Koan-Protocol/token-list/main/token-list/src/logos/lisk-sepolia/0x0a281E2193FFfb4EFD50B198DA25494A2644f43E.png"
+    },
+    {
+      "chainId": 4202,
+      "address": "0x27eaAf3FD3b508f0E0261F274B2574f15B92c38e",
+      "name": "USD Coin ",
+      "symbol": "USDC",
+      "decimals": 6,
+      "logoURI": "https://raw.githubusercontent.com/Koan-Protocol/token-list/main/token-list/src/logos/lisk-sepolia/0x27eaAf3FD3b508f0E0261F274B2574f15B92c38e.png"
+    },
+    {
+      "chainId": 4202,
+      "address": "0x7f31d5064C7914e417091A39eceBb81bAc582536",
+      "name": "Wrapped BTC",
+      "symbol": "WBTC",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/Koan-Protocol/token-list/main/token-list/src/logos/lisk-sepolia/0x7f31d5064C7914e417091A39eceBb81bAc582536.png"
+    },
+    {
+      "chainId": 4202,
+      "address": "0x4200000000000000000000000000000000000006",
+      "name": "Wrapped Ether",
+      "symbol": "WETH",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/Koan-Protocol/token-list/main/token-list/src/logos/lisk-sepolia/0x4200000000000000000000000000000000000006.png"
+    },
+    {
+      "address": "0x50c5725949A6F0c72E6C4a641F24049A917DB0Cb",
+      "chainId": 8453,
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/Koan-Protocol/token-list/main/src/logos/base/0x50c5725949A6F0c72E6C4a641F24049A917DB0Cb.jpg",
+      "name": "Dai Stablecoin",
+      "symbol": "DAI"
+    },
+    {
+      "address": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+      "chainId": 8453,
+      "decimals": 6,
+      "logoURI": "https://raw.githubusercontent.com/Koan-Protocol/token-list/main/src/logos/base/0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913.jpg",
+      "name": "USD Coin",
+      "symbol": "USDC"
+    },
+    {
+      "chainId": 84532,
+      "address": "0x27eaAf3FD3b508f0E0261F274B2574f15B92c38e",
+      "name": "Dai Stablecoin ",
+      "symbol": "DAI",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/Koan-Protocol/token-list/main/token-list/src/logos/base-sepolia/0x27eaAf3FD3b508f0E0261F274B2574f15B92c38e.png"
+    },
+    {
+      "chainId": 84532,
+      "address": "0x7f31d5064C7914e417091A39eceBb81bAc582536",
+      "name": "KOAN Token",
+      "symbol": "KOAN",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/Koan-Protocol/token-list/main/token-list/src/logos/base-sepolia/0x7f31d5064C7914e417091A39eceBb81bAc582536.png"
+    },
+    {
+      "chainId": 84532,
+      "address": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+      "name": "USD Coin ",
+      "symbol": "USDC",
+      "decimals": 6,
+      "logoURI": "https://raw.githubusercontent.com/Koan-Protocol/token-list/main/token-list/src/logos/base-sepolia/0x036CbD53842c5426634e7929541eC2318f3dCF7e.png"
+    },
+    {
+      "chainId": 84532,
+      "address": "0x26F653f8b51FA2F6c39eD6adf1A9401B8DBA8819",
+      "name": "Wrapped BTC",
+      "symbol": "WBTC",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/Koan-Protocol/token-list/main/token-list/src/logos/base-sepolia/0x26F653f8b51FA2F6c39eD6adf1A9401B8DBA8819.png"
+    },
+    {
+      "chainId": 84532,
+      "address": "0x4200000000000000000000000000000000000006",
+      "name": "Wrapped Ether",
+      "symbol": "WETH",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/Koan-Protocol/token-list/main/token-list/src/logos/base-sepolia/0x4200000000000000000000000000000000000006.png"
+    }
+  ]
+}
